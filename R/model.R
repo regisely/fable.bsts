@@ -87,7 +87,7 @@ train_bsts <- function(.data, specials, iterations = 1000, ...) {
   tbl_data <- as_tibble(.data)[c(rlang::expr_text(index(.data)), measured_vars(.data))]
   colnames(tbl_data) <- c("index", "y")
 
-  xts_data <- xts::xts(x = tbl_data$y, order.by = tbl_data$index)
+  xts_data <- xts::xts(x = tbl_data$y, order.by = as.Date(tbl_data$index))
 
   # Initialize state specification
   state <- list()
