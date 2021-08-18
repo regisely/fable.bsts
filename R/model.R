@@ -33,7 +33,7 @@ specials_bsts <- new_specials(
 
     # Compute bsts interval
     period <- fabletools::get_frequencies(period, self$data, .auto = "smallest")
-    period <- period * suppressMessages(interval/lubridate::days(1))
+    ## period <- period * suppressMessages(interval/lubridate::days(1))
 
     as.list(environment())
   }
@@ -48,7 +48,7 @@ specials_bsts <- new_specials(
 
     # Compute bsts interval
     period <- fabletools::get_frequencies(period, self$data, .auto = "smallest")
-    period <- period * suppressMessages(interval/lubridate::days(1))
+    ## period <- period * suppressMessages(interval/lubridate::days(1))
 
     as.list(environment())
   }
